@@ -22,7 +22,7 @@ public class Movement : MonoBehaviour
         Vector3 moveDirection = new Vector3(Mathf.Sin(angle), 0, Mathf.Cos(angle));
         transform.localRotation = Quaternion.LookRotation(moveDirection);
         transform.position += transform.forward * Time.deltaTime * moveVertical;
-        Debug.Log("Rotation: " + angle);
+        //Debug.Log("Rotation: " + angle);
     }
 
     void OnTriggerEnter(Collider other)
@@ -31,7 +31,7 @@ public class Movement : MonoBehaviour
         {
             other.gameObject.SetActive(false);
             score++;
-            Debug.Log("Score: " + score);
+            //Debug.Log("Score: " + score);
         }
     }
 
