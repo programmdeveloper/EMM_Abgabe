@@ -72,22 +72,21 @@ public class buttonBehaviour : MonoBehaviour
 
     void Update()
     {
-        if (up)
+        if (up == true)
         {
             player.position += player.forward * Time.deltaTime * 0.3f;
         }
-        if (down)
+        if (down == true)
         {
             player.position += player.forward * Time.deltaTime * -0.3f;
         }
-        if (left)
+        if (left == true)
         {
             ang += -1.0f * 0.5f * Time.deltaTime;
             Vector3 moveDirection = new Vector3(Mathf.Sin(ang), 0, Mathf.Cos(ang));
             player.localRotation = Quaternion.LookRotation(moveDirection);
-            Debug.Log("Rotation: " + ang);
         }
-        if (right)
+        if (right == true)
         {
             ang += 1.0f * 0.5f * Time.deltaTime;
             Vector3 moveDirection = new Vector3(Mathf.Sin(ang), 0, Mathf.Cos(ang));

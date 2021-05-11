@@ -14,7 +14,7 @@ public class GameObjectBehaviour : MonoBehaviour
     {
         //anzahl = UnityEngine.Random.Range(1, 7);
         for(int i = 0; i < anzahl; i++) {
-            myPrefab = Instantiate(myPrefab, new Vector3(UnityEngine.Random.Range(-5f, 5f), 1, UnityEngine.Random.Range(-5f, 5f)), Quaternion.identity, parentobj);
+            Instantiate(myPrefab, new Vector3(UnityEngine.Random.Range(-5f, 5f), 1, UnityEngine.Random.Range(-5f, 5f)), Quaternion.identity, parentobj);
             //myPrefab.transform.SetParent(parentobj);
         }
     }
